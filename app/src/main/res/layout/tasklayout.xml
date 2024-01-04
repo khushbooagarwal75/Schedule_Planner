@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="18dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_task"
+        android:background="#313638"
+        android:longClickable="true">
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tv_showdate"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:checked="true"
+            android:padding="20dp"
+            tool:text="This is a string"></CheckBox>
+
+        <TextView
+            android:id="@+id/tv_showdate"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textAllCaps="true"
+
+            android:textSize="30dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <View
+            android:layout_width="7dp"
+            android:layout_height="150dp"
+            android:id="@+id/v"
+            android:layout_toRightOf="@id/tv_showdate"
+            android:background="@color/black"></View>
+
+
+
+
+        <TextView
+            android:id="@+id/tv_showtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/v"
+            android:layout_below="@id/cb"
+            android:padding="10dp">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

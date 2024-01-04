@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTaskActivity"
+    android:background="@color/black"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_task"
+        android:text="Enter Task: "
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:textStyle="italic">
+
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter task"
+        android:padding="10dp"
+        android:id="@+id/et_task"
+        android:layout_below="@id/tv_task"
+        >
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_date"
+        android:layout_below="@id/et_task"
+        android:text="Select Date: "
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:textStyle="italic">
+
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Select Date"
+        android:padding="10dp"
+        android:id="@+id/et_date"
+        android:layout_below="@id/tv_date"
+        android:focusable="false"
+        >
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_time"
+        android:layout_below="@id/et_date"
+        android:text="Select Time: "
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:textStyle="italic">
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Time"
+        android:padding="10dp"
+        android:id="@+id/et_time"
+        android:visibility="invisible"
+        android:layout_below="@id/tv_time"
+        android:focusable="false"
+        >
+    </EditText>
+    <!--<TimePicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:id="@+id/tp"
+        android:timePickerMode="spinner"
+        android:visibility="invisible"
+    >
+
+    </TimePicker>-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_addtask"
+        android:text="Add Task"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/et_time"
+        >
+
+    </Button>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/et_id"
+        android:visibility="invisible"
+        android:layout_below="@id/btn_addtask"
+        android:focusable="false"
+        >
+    </EditText>
+</RelativeLayout>

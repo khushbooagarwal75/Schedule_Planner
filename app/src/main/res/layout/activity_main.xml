@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textSize="40dp"
+        android:padding="10dp"
+        android:layout_marginRight="60dp"
+        android:text="MY TASKS .... "
+        android:id="@+id/tv_tasks"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        ></TextView>
+
+    <ImageView
+        android:id="@+id/ivscan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/tv_tasks"
+        android:padding="0dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/baseline_document_scanner_24">
+
+    </ImageView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/view"
+        android:layout_below="@id/tv_tasks"
+        android:background="@color/design_default_color_primary"></View>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hint"
+
+        android:textAlignment="center"
+        android:textColor="@color/material_dynamic_neutral40"
+        android:text="Long Press On Task To Edit or Delete "
+        android:layout_below="@id/view"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@id/hint"
+        android:padding="2dp"
+        android:id="@+id/rv_list"
+        android:layout_height="650dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:nestedScrollingEnabled="true"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/ed_addtask"
+        android:id="@+id/fb_add"
+        android:src="@drawable/baseline_add_task_24">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    
+    <ImageButton
+        android:id="@+id/ib_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/baseline_mic_24"
+        />
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_addtask"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@id/ib_mic"
+        android:hint="Enter Quick Task By Speaking" />
+</RelativeLayout>
